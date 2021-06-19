@@ -1,4 +1,7 @@
 test:
+	go test -v -cover ./...
+
+test-out:
 	go test -v -cover -coverprofile=cover.out ./...
 
 push:
