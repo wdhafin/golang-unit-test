@@ -9,6 +9,16 @@ import (
 	"github.com/stretchr/testify/require"
 )
 
+func TestMain(m *testing.M) {
+	// before
+	fmt.Println("before unit test")
+
+	m.Run()
+
+	fmt.Println("after unit test")
+	// after
+}
+
 func TestSkip(t *testing.T) {
 	if runtime.GOOS == "linux" {
 		t.Skip("Cannot run on linux")
