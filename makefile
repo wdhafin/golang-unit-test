@@ -4,6 +4,9 @@ test:
 test-out:
 	go test -v -cover -coverprofile=cover.out ./...
 
+bench:
+	go test -v -run=TestNoTest -bench=. ./...
+
 push:
 	go fmt ./... && git push origin HEAD
 
